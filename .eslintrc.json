@@ -4,12 +4,10 @@
       "version": "detect"
     }
   },
-  "plugins": ["react", "prettier", "import-helpers", "cypress"],
+  "plugins": ["react", "prettier", "import-helpers"],
   "extends": [
-    "next/core-web-vitals",
     "plugin:react/recommended",
     "plugin:prettier/recommended",
-    "plugin:cypress/recommended",
     "plugin:@typescript-eslint/recommended",
     "eslint-config-prettier",
     "prettier"

@@ -14,5 +14,7 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   "files.eol": "\n",
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
