@@ -1,15 +1,75 @@
 {
-  "root": true,
-  "extends": ["next/core-web-vitals"],
-  "plugins": ["testing-library"],
-  "overrides": [
-    // Only uses Testing Library lint rules in test files
-    {
-      "files": [
-        "**/__tests__/**/*.[jt]s?(x)",
-        "**/?(*.)+(spec|test).[jt]s?(x)"
-      ],
-      "extends": ["plugin:testing-library/react"]
+  "settings": {
+    "react": {
+      "version": "detect"
     }
-  ]
+  },
+  "plugins": ["react", "prettier", "import-helpers", "cypress"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier",
+    "prettier"
+  ],
+  "ignorePatterns": [".eslintrc.js"],
+  "parserOptions": {
+    "project": "./tsconfig-eslint.json"
+  },
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "quoteProps": "as-needed",
+        "trailingComma": "none",
+        "singleQuote": true,
+        "printWidth": 80,
+        "jsxSingleQuote": true
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "extendDefaults": true,
+        "types": {
+          "{}": false
+        }
+      }
+    ],
+    "@typescript-eslint/triple-slash-reference": "off",
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/consistent-type-definitions": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/consistent-type-assertions": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off",
+    "import/export": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "never",
+        "groups": [
+          "module",
+          "/^~/domain/",
+          "/^~/data/",
+          "/^~/infra/",
+          "/^~/main/",
+          "/^~/presentation/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "ignoreCase": false
+        }
+      }
+    ]
+  }
 }
