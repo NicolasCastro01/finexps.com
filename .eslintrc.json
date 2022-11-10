@@ -14,7 +14,8 @@
   ],
   "ignorePatterns": [".eslintrc.js"],
   "parserOptions": {
-    "project": "./tsconfig-eslint.json"
+    "project": "./tsconfig-eslint.json",
+    "createDefaultProgram": true
   },
   "rules": {
     "prettier/prettier": [
