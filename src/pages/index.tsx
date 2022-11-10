@@ -1,11 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import styles from '@/pages/index.module.css';
+import styles from '~/pages/index.module.css';
 
 export default function Home() {
-  var test = 1;
-  console.log(test);
   return (
     <div className={styles.container}>
       <Head>
