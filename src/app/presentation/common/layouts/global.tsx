@@ -1,7 +1,7 @@
 import { Roboto } from '@next/font/google';
 import Head from 'next/head';
 
-const roboto = Roboto({ weight: ['300', '700'] });
+const roboto = Roboto({ weight: ['300', '400', '700'] });
 
 interface GlobalProps {
   children: React.ReactNode;
