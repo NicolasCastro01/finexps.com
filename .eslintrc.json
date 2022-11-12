@@ -25,7 +25,9 @@
         "trailingComma": "none",
         "singleQuote": true,
         "printWidth": 80,
-        "jsxSingleQuote": true
+        "jsxSingleQuote": true,
+        "useTabs": false,
+        "endOfLine": "lf"
       }
     ],
     "@typescript-eslint/ban-types": [
