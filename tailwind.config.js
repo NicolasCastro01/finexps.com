@@ -14,6 +14,9 @@ module.exports = {
       lg: '976px',
       xl: '1440px'
     },
+    height: {
+      '54px': '3.375rem'
+    },
     colors: {
       greenDark: '#015F43',
       greenLight: '#00B37E',
@@ -34,6 +37,7 @@ module.exports = {
     },
     fontWeight: {
       regular: 300,
+      medium: 400,
       bold: 700
     },
     lineHeight: {
