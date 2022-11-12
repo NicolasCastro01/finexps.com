@@ -4,7 +4,8 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx}',
     './src/pages/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
-    './src/app/*.{js,ts,jsx,tsx}'
+    './src/app/*.{js,ts,jsx,tsx}',
+    './src/pages/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     screens: {
@@ -29,11 +30,11 @@ module.exports = {
       white: '#FFFFFF'
     },
     fontFamily: {
-      sans: ['Roboto', 'sans-serif']
+      roboto: ['Roboto', 'sans-serif']
     },
     fontWeight: {
       regular: 300,
-      bold: 500
+      bold: 700
     },
     lineHeight: {
       normal: 1.6
@@ -44,6 +45,16 @@ module.exports = {
       '20px': '1.25rem',
       '24px': '1.5rem',
       '32px': '2rem'
+    },
+    padding: {
+      '8px': '0.5rem',
+      '12px': '0.75rem',
+      '16px': '1rem',
+      '20px': '1.25rem',
+      '24px': '1.5rem'
+    },
+    gap: {
+      '12px': '0.75rem'
     },
     extend: {
       borderRadius: {
