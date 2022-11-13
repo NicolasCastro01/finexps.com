@@ -22,16 +22,15 @@ function SelectButtonComponent({
     }[variant];
   };
   return (
-    <div
-      className={`${handleVariant()} py-16px flex justify-center items-center max-w-211px rounded-6px text-16px cursor-pointer gap-8px duration-150 hover:duration-150`}
+    <button
+      type='button'
+      className={`${handleVariant()} py-16px flex justify-center items-center max-w-211px min-w-159px rounded-6px text-16px cursor-pointer gap-8px duration-150 hover:duration-150`}
       onClick={onClick}
       aria-label={`Botão ${label}`}
-      role='button'
-      tabIndex={0}
     >
       {icon}
       Entrada
-    </div>
+    </button>
   );
 }
 
