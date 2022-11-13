@@ -21,7 +21,7 @@ function ButtonComponent({
   const handleBackground = () => {
     const backgroundTransparentIsTrue = backgroundTransparent;
     if (backgroundTransparentIsTrue) {
-      return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white';
+      return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white w-full';
     }
 
     return 'bg-greenDark text-white hover:bg-greenLight text-white';
@@ -43,6 +43,7 @@ function ButtonComponent({
       aria-label={`Botão ${label}`}
       onClick={onClick}
       data-testid='button'
+      disabled={disabled}
     >
       {icon}
       {label}
