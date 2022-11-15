@@ -1,20 +1,18 @@
 import { Roboto } from '@next/font/google';
-import Head from 'next/head';
 
 const roboto = Roboto({ weight: ['300', '400', '700'] });
 
-interface GlobalProps {
+interface GlobalLayoutProps {
   children: React.ReactNode;
+  title?: string;
 }
 
-function GlobalLayout({ children }: GlobalProps) {
+function GlobalLayout({ children, title }: GlobalLayoutProps) {
   return (
-    <section className={roboto.className}>
-      <Head>
-        <title>Next.js</title>
-      </Head>
-      {children}
-    </section>
+    <>
+      <title>{title}</title>
+      <main className={roboto.className}>{children}</main>
+    </>
   );
 }
 
