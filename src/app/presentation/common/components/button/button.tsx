@@ -38,6 +38,7 @@ function ButtonComponent({
 			 flex
 			 justify-center
 			 gap-12px
+       w-full
 			 ${handleBackground()}
 			 ${handleVariant()}`}
       aria-label={`Botão ${label}`}
