@@ -3,6 +3,7 @@
 <h1 align="center">Expenses</h1>
 
 <p align="center" margin-top="25px" >
+  <img src="https://img.shields.io/badge/Status-Development-red" alt="Status: Development" />
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/viniciusanchieta/expenses?color=blueviolet">
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/viniciusanchieta/expenses?color=blueviolet">
@@ -13,6 +14,19 @@
 ## About
 
 This project is a simple expenses manager, where you can add, edit and delete expenses.
+
+## Status
+
+- [x] Create the project with Next.JS v.13
+- [x] Create structure of the project
+- [ ] Create the components with styles
+  - [ ] Common components
+- [ ] Create the pages
+  - [ ] Page postings
+  - [ ] Page login
+- [ ] Create the routes
+- [ ] Create the tests
+- [ ] Deploy the project on Vercel
 
 ## Structure
 
