@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import CardComponent from './card';
+import CardComponent from './card-value';
 
 const makeSut = () => render(<CardComponent />);
 
