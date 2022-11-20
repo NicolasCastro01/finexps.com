@@ -15,10 +15,12 @@ module.exports = {
 			xl: { min: '1440px' }
 		},
 		height: {
-			'54px': '3.375rem'
+			'54px': '3.375rem',
+			'137px': '8.5625rem'
 		},
 		width: {
 			'535px': '33.4375rem',
+			'352px': '22rem',
 			full: '100%'
 		},
 		maxWidth: {
