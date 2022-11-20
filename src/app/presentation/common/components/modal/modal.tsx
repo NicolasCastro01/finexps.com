@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import { CloseIcon } from '~/app/presentation/common/icons';
 import type { ModalProps } from './interfaces';
 
-function ModalComponent({ children, title, iconClose, isOpen }: ModalProps) {
+function ModalComponent({ children, title, isOpen }: ModalProps) {
   const [close, setClose] = useState(false);
 
   const handleClose = () => {
@@ -40,7 +41,7 @@ function ModalComponent({ children, title, iconClose, isOpen }: ModalProps) {
               aria-label='Fechar modal'
               onClick={handleClose}
             >
-              {iconClose}
+              <CloseIcon />
             </button>
           </div>
           <Header />

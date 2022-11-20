@@ -3,8 +3,7 @@ import ModalComponent from './modal';
 
 const defaultProps = {
   isOpen: true,
-  title: 'Modal Title',
-  iconClose: <div />
+  title: 'Modal Title'
 };
 
 const makeSut = () =>
