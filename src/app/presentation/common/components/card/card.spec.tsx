@@ -4,7 +4,7 @@ import CardComponent from './card';
 const makeSut = () => render(<CardComponent />);
 
 describe('CardComponent', () => {
-	test('should render', () => {
-		makeSut();
-	});
+  test('should render', () => {
+    makeSut();
+  });
 });

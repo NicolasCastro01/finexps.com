@@ -1,8 +1,6 @@
 'use client';
 
-import {
-  CardTag
-} from '~/app/presentation/common';
+import { CardTag } from '~/app/presentation/common';
 import { GlobalLayoutTag } from '~/app/presentation/common/layouts';
 
 export default function Page() {
