@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { CloseIcon } from '~/app/presentation/common/icons';
 import type { ModalProps } from './interfaces';
 
-function ModalComponent({ children, title }: ModalProps) {
+function ModalComponent({ children, title, iconClose, isOpen }: ModalProps) {
   const [close, setClose] = useState(false);
 
   const handleClose = () => {
@@ -22,7 +21,8 @@ function ModalComponent({ children, title }: ModalProps) {
   );
 
   const handleModal = () => {
-    if (close) {
+    const modalIsOpen = isOpen && !close;
+    if (!modalIsOpen) {
       return <div />;
     }
 
@@ -30,8 +30,9 @@ function ModalComponent({ children, title }: ModalProps) {
       <div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-1 outline-none focus:outline-none h-screen w-screen bg-gray-900 bg-opacity-50 sm:items-end'>
         <div
           className='bg-gray2 rounded-6px w-535px sm:w-full sm:rounded-t-20px'
-          aria-modal='true'
           role='dialog'
+          data-testid='modal'
+          aria-label={title}
         >
           <div className='flex justify-end pt-24px pr-24px'>
             <button
@@ -39,7 +40,7 @@ function ModalComponent({ children, title }: ModalProps) {
               aria-label='Fechar modal'
               onClick={handleClose}
             >
-              <CloseIcon />
+              {iconClose}
             </button>
           </div>
           <Header />
