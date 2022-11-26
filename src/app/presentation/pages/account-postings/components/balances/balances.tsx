@@ -23,7 +23,7 @@ function BalancesComponent() {
 
 	return (
 		<div
-			className='flex gap-32px justify-center sm:gap-12px w-full sm:justify-start cursor-pointer select-none overflow-x-hidden'
+			className='flex gap-32px justify-center sm:gap-12px w-full sm:justify-start cursor-pointer select-none sm:overflow-x-scroll scrollbar-none'
 			ref={ref}
 			onMouseDown={mouseDown}
 		>
