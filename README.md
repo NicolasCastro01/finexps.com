@@ -17,39 +17,39 @@ This project is a simple expenses manager, where you can add, edit and delete ex
 
 ## Status
 
-- [x] Create the project with Next.JS v.13
-- [x] Create structure of the project
-- [ ] Create the components with styles
-  - [ ] Common components
-- [ ] Create the pages
-  - [ ] Page postings
-  - [ ] Page login
-- [ ] Create the routes
-- [ ] Create the tests
-- [ ] Deploy the project on Vercel
+-   [x] Create the project with Next.JS v.13
+-   [x] Create structure of the project
+-   [x] Create the components with styles
+    -   [x] Common components
+-   [ ] Create the pages
+    -   [ ] Page postings
+    -   [ ] Page login
+-   [ ] Create the routes
+-   [ ] Create the tests
+-   [ ] Deploy the project on Vercel
 
 ## Structure
 
 The structure of the project is based on the DDD (Domain Driven Design) pattern, where the domain is divided into layers, each with its own responsibility.
 Layers:
 
-- Application: responsible for the application's business rules.
-- Domain: responsible for creating the domain entities.
-- Infra: responsible for the data access layer.
-- Main: responsible for the application's entry point.
-- Presentation: responsible for the application's presentation layer.
+-   Application: responsible for the application's business rules.
+-   Domain: responsible for creating the domain entities.
+-   Infra: responsible for the data access layer.
+-   Main: responsible for the application's entry point.
+-   Presentation: responsible for the application's presentation layer.
 
 ## Technologies
 
 This project was developed with the following technologies:
 
-- [React](https://reactjs.org)
-- [Next.js](https://nextjs.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Jest](https://jestjs.io)
-- [Testing Library](https://testing-library.com)
-- [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
+-   [React](https://reactjs.org)
+-   [Next.js](https://nextjs.org)
+-   [TypeScript](https://www.typescriptlang.org)
+-   [Tailwind CSS](https://tailwindcss.com)
+-   [Jest](https://jestjs.io)
+-   [Testing Library](https://testing-library.com)
+-   [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
 
 ## Getting started
 
