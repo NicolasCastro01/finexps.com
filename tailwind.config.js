@@ -15,6 +15,9 @@ module.exports = {
 			xl: { min: '1440px' }
 		},
 		height: {
+			'1px': '0.0625rem',
+			'2px': '0.125rem',
+			'3px': '0.1875rem',
 			'54px': '3.375rem',
 			'137px': '8.5625rem',
 			'150px': '9.375rem'
@@ -110,5 +113,5 @@ module.exports = {
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('tailwind-scrollbar')]
 };
