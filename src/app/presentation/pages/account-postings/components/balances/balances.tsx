@@ -1,6 +1,10 @@
 import { useRef } from 'react';
 import { CardValueTag } from '~/app/presentation/common/components';
-import { ArrowUpCircleIcon } from '~/app/presentation/common/icons';
+import {
+	ArrowDownCircleIcon,
+	ArrowUpCircleIcon,
+	DollarCircleIcon
+} from '~/app/presentation/common/icons';
 
 function BalancesComponent() {
 	const ref = useRef<HTMLDivElement>(null);
@@ -40,20 +44,20 @@ function BalancesComponent() {
 			<div>
 				<CardValueTag
 					backgroundColor='gray'
-					icon={<ArrowUpCircleIcon />}
-					iconColor='green'
-					info='Última entrada em 13 de abril'
-					title='Entradas'
+					icon={<ArrowDownCircleIcon />}
+					iconColor='red'
+					info='Última saída em 13 de abril'
+					title='Saídas'
 					value={1000}
 				/>
 			</div>
 			<div>
 				<CardValueTag
-					backgroundColor='gray'
-					icon={<ArrowUpCircleIcon />}
+					backgroundColor='green'
+					icon={<DollarCircleIcon />}
 					iconColor='green'
-					info='Última entrada em 13 de abril'
-					title='Entradas'
+					info='De 15/03/22 até 13/04/22'
+					title='Total'
 					value={1000}
 				/>
 			</div>
