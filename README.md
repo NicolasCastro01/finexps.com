@@ -50,6 +50,7 @@ This project was developed with the following technologies:
 -   [Jest](https://jestjs.io)
 -   [Testing Library](https://testing-library.com)
 -   [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
+-   [Husky](https://typicode.github.io/husky/#/)
 
 ## Getting started
 
