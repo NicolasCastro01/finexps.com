@@ -11,7 +11,7 @@ function ButtonComponent({
 	const handleVariant = () => {
 		const variants = {
 			small: 'py-8px px-16px text-8px',
-			medium: 'py-12px px-20px text-16px',
+			medium: 'text-16px w-152px h-50px',
 			large: 'py-16px px-32px text-16px'
 		}[variant];
 
@@ -21,7 +21,7 @@ function ButtonComponent({
 	const handleBackground = () => {
 		const backgroundTransparentIsTrue = backgroundTransparent;
 		if (backgroundTransparentIsTrue) {
-			return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white w-full';
+			return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white';
 		}
 
 		return 'bg-greenDark text-white hover:bg-greenLight text-white';
@@ -38,7 +38,7 @@ function ButtonComponent({
 			 flex
 			 justify-center
 			 gap-12px
-       w-full
+			 items-center	
 			 ${handleBackground()}
 			 ${handleVariant()}`}
 			aria-label={`Botão ${label}`}
