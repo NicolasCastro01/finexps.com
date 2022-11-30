@@ -10,7 +10,7 @@ function ButtonComponent({
 }: ButtonProps) {
 	const handleVariant = () => {
 		const variants = {
-			small: 'py-8px px-16px text-8px',
+			small: 'w-54px h-54px text-8px',
 			medium: 'text-16px w-152px h-50px',
 			large: 'py-16px px-32px text-16px'
 		}[variant];
@@ -21,10 +21,10 @@ function ButtonComponent({
 	const handleBackground = () => {
 		const backgroundTransparentIsTrue = backgroundTransparent;
 		if (backgroundTransparentIsTrue) {
-			return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white';
+			return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white [&>svg]:fill-greenLight';
 		}
 
-		return 'bg-greenDark text-white hover:bg-greenLight text-white';
+		return 'bg-greenDark text-white hover:bg-greenLight text-white [&>svg]:fill-white';
 	};
 
 	return (
