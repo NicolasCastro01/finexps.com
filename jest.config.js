@@ -14,7 +14,8 @@ const customJestConfig = {
 	moduleNameMapper: {
 		'~/(.*)': '<rootDir>/src/$1',
 		'\\.(css|sass|scss)$': 'identity-obj-proxy'
-	}
+	},
+	collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/index.{ts,tsx}']
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
