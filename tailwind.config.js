@@ -25,6 +25,8 @@ module.exports = {
 			'212px': '13.25rem'
 		},
 		width: {
+			'50px': '3.125rem',
+			'54px': '3.375rem',
 			'280px': '17.5rem',
 			'352px': '22rem',
 			'535px': '33.4375rem',
