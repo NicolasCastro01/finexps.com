@@ -11,7 +11,7 @@ function ButtonComponent({
 	const handleVariant = () => {
 		const variants = {
 			small: 'w-54px h-54px text-8px',
-			medium: 'text-16px w-152px h-50px',
+			medium: 'text-16px w-152px h-54px',
 			large: 'py-16px px-32px text-16px'
 		}[variant];
 
