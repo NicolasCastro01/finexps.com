@@ -1,11 +1,11 @@
 import { ButtonTag, InputTextTag } from '~/app/presentation/common/components';
 import { SearchIcon } from '~/app/presentation/common/icons';
-import { BalancesTag } from './components';
+import { BalancesTag, TransactionTag } from './components';
 
 function AccountPostingsPage() {
 	return (
 		<>
-			<header className='bg-gray1 h-212px py-40px px-160px sm:px-20px'>
+			<header className='bg-gray1 h-212px py-40px px-160px md:px-20px sm:px-20px'>
 				<div className='flex justify-end'>
 					<ButtonTag
 						backgroundTransparent={false}
@@ -18,7 +18,7 @@ function AccountPostingsPage() {
 					<BalancesTag />
 				</div>
 			</header>
-			<section className='mt-24 px-160px sm:px-20px flex justify-between gap-16px'>
+			<section className='mt-24 px-160px md:px-20px sm:px-20px flex justify-between gap-16px'>
 				<div className='w-full'>
 					<InputTextTag
 						onChange={e => console.log(e)}
@@ -43,6 +43,36 @@ function AccountPostingsPage() {
 					/>
 				</div>
 			</section>
+			<main className='mt-7 px-160px md:px-20px sm:px-20px flex flex-col justify-between gap-8px'>
+				<TransactionTag
+					amount={1000}
+					category='Venda'
+					date='13/04/2022'
+					description='Descrição da transação'
+					type='outbound'
+				/>
+				<TransactionTag
+					amount={1000}
+					category='Venda'
+					date='13/04/2022'
+					description='Descrição da transação'
+					type='inbound'
+				/>
+				<TransactionTag
+					amount={1000}
+					category='Venda'
+					date='13/04/2022'
+					description='Descrição da transação'
+					type='outbound'
+				/>
+				<TransactionTag
+					amount={1000}
+					category='Venda'
+					date='13/04/2022'
+					description='Descrição da transação'
+					type='inbound'
+				/>
+			</main>
 		</>
 	);
 }
