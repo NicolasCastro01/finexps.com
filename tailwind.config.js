@@ -20,6 +20,7 @@ module.exports = {
 			'3px': '0.1875rem',
 			'50px': '3.125rem',
 			'54px': '3.375rem',
+			'66px': '4.125rem',
 			'137px': '8.5625rem',
 			'150px': '9.375rem',
 			'212px': '13.25rem'
@@ -31,6 +32,7 @@ module.exports = {
 			'352px': '22rem',
 			'535px': '33.4375rem',
 			'152px': '9.5rem',
+			'400px': '25rem',
 			full: '100%'
 		},
 		maxWidth: {
@@ -78,6 +80,7 @@ module.exports = {
 			'16px': '1rem',
 			'20px': '1.25rem',
 			'24px': '1.5rem',
+			'29px': '1.8125rem',
 			'32px': '2rem',
 			'40px': '2.5rem',
 			'48px': '3rem',
