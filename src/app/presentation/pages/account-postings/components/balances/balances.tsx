@@ -30,6 +30,7 @@ function BalancesComponent() {
 			className='flex gap-32px justify-between md:gap-12px sm:gap-12px w-full md:justify-start sm:justify-start cursor-pointer select-none lg:overflow-x-scroll md:overflow-x-scroll sm:overflow-x-scroll scrollbar-none rounded-6px'
 			ref={ref}
 			onMouseDown={mouseDown}
+			data-testid='balances'
 		>
 			<div>
 				<CardValueTag
