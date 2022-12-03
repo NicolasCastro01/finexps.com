@@ -28,11 +28,16 @@ function TransactionComponent({
 	};
 
 	return (
-		<div className='items-center justify-between flex bg-gray3 h-66px px-32px rounded-5px text-gray6 text-16px font-medium'>
+		<div
+			className='items-center justify-between flex bg-gray3 h-66px px-32px rounded-5px text-gray6 text-16px font-medium'
+			data-testid='transaction'
+		>
 			<div className='w-400px lg:w-280px'>
 				<p>{description}</p>
 			</div>
-			<p className={handleType()}>{handleAmount()}</p>
+			<p className={handleType()} data-testid='amount'>
+				{handleAmount()}
+			</p>
 			<p>Venda</p>
 			<p>13/04/2022</p>
 		</div>
