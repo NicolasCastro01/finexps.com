@@ -5,4 +5,5 @@ export interface ButtonProps {
 	disabled?: boolean;
 	backgroundTransparent: boolean;
 	variant: 'small' | 'medium' | 'large';
+	ariaLabel: string;
 }

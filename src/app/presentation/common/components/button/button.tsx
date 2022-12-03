@@ -6,7 +6,8 @@ function ButtonComponent({
 	backgroundTransparent,
 	disabled,
 	icon,
-	variant
+	variant,
+	ariaLabel
 }: ButtonProps) {
 	const handleVariant = () => {
 		const variants = {
@@ -41,7 +42,7 @@ function ButtonComponent({
 			 items-center	
 			 ${handleBackground()}
 			 ${handleVariant()}`}
-			aria-label={`Botão ${label}`}
+			aria-label={ariaLabel}
 			onClick={onClick}
 			data-testid='button'
 			disabled={disabled}

@@ -6,7 +6,8 @@ const defaultProps = {
 	backgroundTransparent: true,
 	onClick: () => jest.fn(),
 	variant: 'medium',
-	label: 'Buscar'
+	label: 'Buscar',
+	ariaLabel: 'Botão Buscar'
 } as ButtonProps;
 
 const makeSut = () => render(<ButtonComponent {...defaultProps} />);
