@@ -21,7 +21,8 @@ const customJestConfig = {
 		'!src/**/index.{ts,tsx}',
 		'!src/**/layouts/**/*.{ts,tsx}',
 		'!src/**/page.{ts,tsx}',
-		'!src/**/layout.{ts,tsx}'
+		'!src/**/layout.{ts,tsx}',
+		'!src/**/*.stories.{ts,tsx}'
 	]
 };
 
