@@ -21,27 +21,6 @@ export default {
 	}
 } as ComponentMeta<typeof ButtonTag>;
 
-// export const Large = () => {
-//   defaultParams.variant = 'large';
-//   defaultParams.label = 'Button';
-//   defaultParams.icon = null;
-//   return <ButtonTag {...defaultParams} />;
-// };
-
-// export const Medium = () => {
-//   defaultParams.variant = 'medium';
-//   defaultParams.label = 'Button';
-//   defaultParams.icon = null;
-//   return <ButtonTag {...defaultParams} />;
-// };
-
-// export const Small = () => {
-//   defaultParams.label = null;
-//   defaultParams.variant = 'small';
-//   defaultParams.icon = <SearchIcon />;
-//   return <ButtonTag {...defaultParams} />;
-// };
-
 const Template = args => <ButtonTag {...args} />;
 
 export const Large = Template.bind({});
