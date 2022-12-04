@@ -1,7 +1,7 @@
 import { ComponentMeta } from '@storybook/react';
-import { ButtonTag } from '~/app/presentation/common/components/button';
-import type { ButtonProps } from '~/app/presentation/common/components/button/interfaces';
 import { SearchIcon } from '~/app/presentation/common/icons';
+import ButtonTag from './button';
+import type { ButtonProps } from './interfaces';
 
 const defaultParams = {
 	ariaLabel: 'Button',
@@ -15,10 +15,7 @@ const defaultParams = {
 
 export default {
 	title: 'Common/Button',
-	component: ButtonTag,
-	argTypes: {
-		backgroundColor: { control: 'color' }
-	}
+	component: ButtonTag
 } as ComponentMeta<typeof ButtonTag>;
 
 const Template = args => <ButtonTag {...args} />;
