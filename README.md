@@ -51,6 +51,7 @@ This project was developed with the following technologies:
 -   [Testing Library](https://testing-library.com)
 -   [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
 -   [Husky](https://typicode.github.io/husky/#/)
+-   [Storybook](https://storybook.js.org)
 
 ## Getting started
 
@@ -92,6 +93,14 @@ Coverages:
 $ yarn test:ci
 # or
 $ npm run test:ci
+```
+
+Components documentation:
+
+```bash
+$ yarn storybook
+# or
+$ npm run storybook
 ```
 
 ## Contributors
