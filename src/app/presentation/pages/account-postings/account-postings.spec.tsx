@@ -16,7 +16,7 @@ describe('Account Postings Page', () => {
 		expect(main).toBeInTheDocument();
 	});
 
-	describe('Interaction resolution desktop', () => {
+	describe('Interaction with widescreen resolution', () => {
 		it('should click on new transaction button', () => {
 			makeSut();
 			const button = screen.getByRole('button', {
@@ -35,7 +35,7 @@ describe('Account Postings Page', () => {
 			expect(button).toBeInTheDocument();
 		});
 
-		it('should click on search input', () => {
+		it('should type on search field', () => {
 			makeSut();
 			const input = screen.getByRole('textbox', {
 				name: 'Busque uma transação'
@@ -45,7 +45,7 @@ describe('Account Postings Page', () => {
 		});
 	});
 
-	describe('Interaction resolution mobile', () => {
+	describe('Interaction with mobile resolution', () => {
 		it('should click on new transaction button', () => {
 			makeSut();
 			const button = screen.getByRole('button', {
