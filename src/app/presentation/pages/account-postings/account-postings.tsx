@@ -1,4 +1,8 @@
-import { ButtonTag, InputTextTag } from '~/app/presentation/common/components';
+import {
+	ButtonTag,
+	InputTextTag,
+	PaginationTag
+} from '~/app/presentation/common/components';
 import { SearchIcon } from '~/app/presentation/common/icons';
 import { BalancesTag, TransactionTag } from './components';
 
@@ -82,6 +86,9 @@ function AccountPostingsPage() {
 					type='inbound'
 				/>
 			</main>
+			<section className='mt-7 flex justify-center'>
+				<PaginationTag />
+			</section>
 		</>
 	);
 }
