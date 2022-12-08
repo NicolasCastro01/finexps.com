@@ -87,7 +87,7 @@ function AccountPostingsPage() {
 				/>
 			</main>
 			<section className='mt-7 flex justify-center'>
-				<PaginationTag />
+				<PaginationTag totalPages={10} />
 			</section>
 		</>
 	);
