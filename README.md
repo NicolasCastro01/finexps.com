@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/31235308/201514264-80aeaa07-515c-4549-9f50-abc6b309e945.png)
 
-<h1 align="center">Expenses</h1>
+<h1 align="center">FINEXPS</h1>
 
 <p align="center" margin-top="25px" >
   <img src="https://img.shields.io/badge/Status-Development-red" alt="Status: Development" />
@@ -58,7 +58,7 @@ This project was developed with the following technologies:
 Clone the project and access the folder.
 
 ```bash
-$ cd expenses
+$ cd finexps.com
 ```
 
 Follow the steps below:
