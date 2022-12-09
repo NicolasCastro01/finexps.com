@@ -4,9 +4,9 @@ import type { PaginationProps, StateProps } from './interfaces';
 
 function PaginationComponent({ totalPages }: PaginationProps) {
 	const [state, setState] = useState({
-		firstPosition: 1,
-		secondPosition: 2,
-		thirdPosition: 3
+		currentPage: 1,
+		disableArrowLeft: true,
+		disableArrowRight: totalPages <= 3
 	});
 
 	const handleState = ({ key, value }: StateProps) => {
@@ -16,116 +16,91 @@ function PaginationComponent({ totalPages }: PaginationProps) {
 		}));
 	};
 
-	const handleNext = () => {
-		const firstPositionIsEqualTotalPages = state.firstPosition === totalPages;
+	const handleEnableArrowLeft = (page: number) => {
+		const currentPageIsOne = page === 1;
 
-		if (firstPositionIsEqualTotalPages) {
-			return;
+		if (currentPageIsOne) {
+			return handleState({
+				key: 'disableArrowLeft',
+				value: true
+			});
 		}
 
-		handleState({
-			key: 'firstPosition',
-			value: state.firstPosition + 1
+		return handleState({
+			key: 'disableArrowLeft',
+			value: false
 		});
-		handleState({
-			key: 'secondPosition',
-			value: state.secondPosition + 1
+	};
+
+	const handleEnableArrowRight = (page: number) => {
+		const currentPageIsEqualTotalPages = page === totalPages;
+
+		if (currentPageIsEqualTotalPages) {
+			return handleState({
+				key: 'disableArrowRight',
+				value: true
+			});
+		}
+
+		return handleState({
+			key: 'disableArrowRight',
+			value: false
 		});
-		handleState({
-			key: 'thirdPosition',
-			value: state.thirdPosition + 1
-		});
+	};
+
+	const handleNext = () => {
+		const currentPageIsEqualTotalPages = state.currentPage === totalPages;
+
+		if (!currentPageIsEqualTotalPages) {
+			const addOnePageInCurrentPage = state.currentPage + 1;
+			handleState({
+				key: 'currentPage',
+				value: addOnePageInCurrentPage
+			});
+			handleEnableArrowLeft(addOnePageInCurrentPage);
+			handleEnableArrowRight(addOnePageInCurrentPage);
+		}
 	};
 
 	const handlePrevious = () => {
-		const firstPositionIsOne = state.firstPosition === 1;
+		const currentPageIsEqualOne = state.currentPage === 1;
 
-		if (firstPositionIsOne) {
-			return;
+		if (!currentPageIsEqualOne) {
+			const subtractOnePageInCurrentPage = state.currentPage - 1;
+			handleState({
+				key: 'currentPage',
+				value: subtractOnePageInCurrentPage
+			});
+			handleEnableArrowRight(subtractOnePageInCurrentPage);
+			handleEnableArrowLeft(subtractOnePageInCurrentPage);
 		}
-
-		handleState({
-			key: 'firstPosition',
-			value: state.firstPosition - 1
-		});
-		handleState({
-			key: 'secondPosition',
-			value: state.secondPosition - 1
-		});
-		handleState({
-			key: 'thirdPosition',
-			value: state.thirdPosition - 1
-		});
-	};
-
-	const handleEnableArrowLeft = () => {
-		const firstPositionIsOne = state.firstPosition === 1;
-
-		if (firstPositionIsOne) {
-			return '[&>svg]:fill-gray4';
-		}
-
-		return '[&>svg]:fill-green';
-	};
-
-	const handleEnableArrowRight = () => {
-		const thirdPositionIsEqualTotalPages = state.thirdPosition === totalPages;
-
-		if (thirdPositionIsEqualTotalPages) {
-			return '[&>svg]:fill-gray4';
-		}
-
-		return '[&>svg]:fill-green';
-	};
-
-	const handleButtonPageClick = (page: number) => {
-		if (page === totalPages) {
-			return;
-		}
-
-		handleState({
-			key: 'firstPosition',
-			value: page
-		});
-		handleState({
-			key: 'secondPosition',
-			value: page + 1
-		});
-		handleState({
-			key: 'thirdPosition',
-			value: page + 2
-		});
 	};
 
 	return (
-		<div className='flex justify-center w-216px items-center gap-8px'>
+		<div
+			className='flex justify-center w-216px items-center gap-8px'
+			data-testid='pagination'
+		>
 			<button
-				className={`${handleEnableArrowLeft()} mr-3`}
+				className='[&>svg]:fill-green mr-3 disabled:cursor-default [&>svg]:disabled:fill-gray4'
 				onClick={handlePrevious}
+				disabled={state.disableArrowLeft}
+				aria-label='Página anterior'
 			>
 				<ArrowLeftIcon />
 			</button>
 			<button
-				className='text-gray7 bg-greenDark w-40px h-40px rounded-6px'
-				onClick={() => handleButtonPageClick(state.firstPosition)}
+				className='text-gray7 bg-greenDark w-40px h-40px rounded-6px cursor-default'
+				aria-label='Página atual'
 			>
-				{state.firstPosition}
+				{state.currentPage}
 			</button>
+
 			<button
-				className='text-gray7 bg-gray4 w-40px h-40px rounded-6px'
-				onClick={() => handleButtonPageClick(state.secondPosition)}
-			>
-				{state.secondPosition}
-			</button>
-			<button
-				className='text-gray7 bg-gray4 w-40px h-40px rounded-6px'
-				onClick={() => handleButtonPageClick(state.thirdPosition)}
-			>
-				{state.thirdPosition}
-			</button>
-			<button
-				className={`${handleEnableArrowRight()} ml-3`}
+				className='[&>svg]:fill-green ml-3 disabled:cursor-default [&>svg]:disabled:fill-gray4'
 				onClick={handleNext}
+				disabled={state.disableArrowRight}
+				aria-label='Próxima página'
 			>
 				<ArrowRightIcon />
 			</button>
