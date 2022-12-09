@@ -4,4 +4,5 @@ export * from './arrow-right';
 export * from './arrow-up-circle';
 export * from './close';
 export * from './dollar-circle';
+export * from './finexps';
 export * from './search';

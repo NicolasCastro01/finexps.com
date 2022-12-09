@@ -3,7 +3,7 @@ import {
 	InputTextTag,
 	PaginationTag
 } from '~/app/presentation/common/components';
-import { SearchIcon } from '~/app/presentation/common/icons';
+import { FinexpsIcon, SearchIcon } from '~/app/presentation/common/icons';
 import { BalancesTag, TransactionTag } from './components';
 
 function AccountPostingsPage() {
@@ -13,7 +13,10 @@ function AccountPostingsPage() {
 				className='bg-gray1 h-212px py-40px px-160px md:px-20px sm:px-20px'
 				data-testid='header'
 			>
-				<div className='flex justify-end'>
+				<div className='flex justify-between'>
+					<div className='[&>svg]:fill-green'>
+						<FinexpsIcon />
+					</div>
 					<ButtonTag
 						backgroundTransparent={false}
 						onClick={() => console.log('click')}
@@ -86,7 +89,7 @@ function AccountPostingsPage() {
 					type='inbound'
 				/>
 			</main>
-			<section className='mt-7 flex justify-center'>
+			<section className='mt-10 flex justify-center'>
 				<PaginationTag totalPages={10} />
 			</section>
 		</>
