@@ -9,7 +9,7 @@ module.exports = {
 	],
 	theme: {
 		screens: {
-			sm: { min: '375px', max: '767px' },
+			sm: { min: '0px', max: '767px' },
 			md: { min: '768px', max: '975px' },
 			lg: { min: '976px', max: '1439px' },
 			xl: { min: '1440px' }
@@ -23,6 +23,7 @@ module.exports = {
 			'54px': '3.375rem',
 			'66px': '4.125rem',
 			'137px': '8.5625rem',
+			'140px': '8.75rem',
 			'150px': '9.375rem',
 			'212px': '13.25rem'
 		},
@@ -35,8 +36,10 @@ module.exports = {
 			'352px': '22rem',
 			'535px': '33.4375rem',
 			'152px': '9.5rem',
+			'340px': '21.25rem',
 			'400px': '25rem',
-			full: '100%'
+			full: '100%',
+			'full-vw': '100vw'
 		},
 		maxWidth: {
 			'211px': '13.1875rem'
@@ -91,6 +94,7 @@ module.exports = {
 			'160px': '10rem'
 		},
 		gap: {
+			'4px': '0.25rem',
 			'8px': '0.5rem',
 			'12px': '0.75rem',
 			'16px': '1rem',
