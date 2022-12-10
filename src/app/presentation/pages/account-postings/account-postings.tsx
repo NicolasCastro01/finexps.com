@@ -89,7 +89,7 @@ function AccountPostingsPage() {
 					type='inbound'
 				/>
 			</main>
-			<section className='mt-10 flex justify-center'>
+			<section className='mt-10 mb-10 flex justify-center'>
 				<PaginationTag totalPages={10} />
 			</section>
 		</>
