@@ -33,7 +33,7 @@ function TransactionComponent({
 			className='items-center gap-8px justify-between flex bg-gray3 h-66px px-32px rounded-5px text-gray6 text-16px font-medium sm:flex-col sm:h-140px sm:p-29px sm:items-start sm:gap-8px'
 			data-testid='transaction'
 		>
-			<div className='w-400px lg:w-216px md:w-216px sm:w-full'>
+			<div className='w-400px lg:w-216px md:w-216px sm:w-full-percent'>
 				<p>{description}</p>
 			</div>
 			<p
@@ -42,7 +42,7 @@ function TransactionComponent({
 			>
 				{handleAmount()}
 			</p>
-			<div className='flex xl:w-340px lg:w-216px md:w-216px justify-between sm:w-full'>
+			<div className='flex xl:w-340px lg:w-216px md:w-216px justify-between sm:w-full-percent'>
 				<div className='[&>svg]:hidden flex [&>svg]:fill-gray5 items-center gap-4px [&>svg]:sm:block'>
 					<TagIcon />
 					<p className='sm:text-gray5'>{category}</p>

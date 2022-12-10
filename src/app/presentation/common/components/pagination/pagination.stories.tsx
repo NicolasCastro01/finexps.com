@@ -1,18 +1,18 @@
 import { ComponentMeta } from '@storybook/react';
 import type { PaginationProps } from './interfaces';
-import PaginationTag from './pagination';
+import PaginationComponent from './pagination';
 
-const defaultParams = {
+const defaultProps = {
 	totalPages: 10
 } as PaginationProps;
 
 export default {
 	title: 'Common/Pagination',
-	component: PaginationTag
-} as ComponentMeta<typeof PaginationTag>;
+	component: PaginationComponent
+} as ComponentMeta<typeof PaginationComponent>;
 
-const Template = args => <PaginationTag {...args} />;
+const Template = args => <PaginationComponent {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-	...defaultParams
+	...defaultProps
 };

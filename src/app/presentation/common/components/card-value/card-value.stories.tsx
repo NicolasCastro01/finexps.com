@@ -1,9 +1,9 @@
 import { ComponentMeta } from '@storybook/react';
 import { ArrowUpCircleIcon } from '~/app/presentation/common/icons';
-import CardValueTag from './card-value';
+import CardValueComponent from './card-value';
 import type { CardValuesProps } from './interfaces';
 
-const defaultParams = {
+const defaultProps = {
 	title: 'Card Value',
 	info: 'Info',
 	icon: <ArrowUpCircleIcon />,
@@ -14,19 +14,19 @@ const defaultParams = {
 
 export default {
 	title: 'Common/CardValue',
-	component: CardValueTag
-} as ComponentMeta<typeof CardValueTag>;
+	component: CardValueComponent
+} as ComponentMeta<typeof CardValueComponent>;
 
-const Template = args => <CardValueTag {...args} />;
+const Template = args => <CardValueComponent {...args} />;
 
 export const Gray = Template.bind({});
 Gray.args = {
-	...defaultParams,
+	...defaultProps,
 	backgroundColor: 'gray'
 };
 
 export const Green = Template.bind({});
 Green.args = {
-	...defaultParams,
+	...defaultProps,
 	backgroundColor: 'green'
 };

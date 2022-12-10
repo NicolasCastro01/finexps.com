@@ -23,7 +23,7 @@ function InputTextComponent({
 			placeholder={placeholder}
 			value={value}
 			onChange={handleChange}
-			className={`bg-gray1 rounded-6px p-16px w-full text-16px font-medium text-gray6 focus:outline-none focus:ring-1 focus:ring-greenLight placeholder-gray5 ${handleError()}`}
+			className={`bg-gray1 rounded-6px p-16px w-full-percent text-16px font-medium text-gray6 focus:outline-none focus:ring-1 focus:ring-greenLight placeholder-gray5 ${handleError()}`}
 			aria-label={placeholder}
 		/>
 	);

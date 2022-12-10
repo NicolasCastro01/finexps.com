@@ -1,9 +1,9 @@
 import { ComponentMeta } from '@storybook/react';
 import { ArrowUpCircleIcon } from '~/app/presentation/common/icons';
 import type { SelectButtonProps } from './interfaces';
-import SelectButtonTag from './select-button';
+import SelectButtonComponent from './select-button';
 
-const defaultParams = {
+const defaultProps = {
 	selected: true,
 	onClick: () => {
 		return;
@@ -15,20 +15,20 @@ const defaultParams = {
 
 export default {
 	title: 'Common/SelectButton',
-	component: SelectButtonTag
-} as ComponentMeta<typeof SelectButtonTag>;
+	component: SelectButtonComponent
+} as ComponentMeta<typeof SelectButtonComponent>;
 
-const Template = args => <SelectButtonTag {...args} />;
+const Template = args => <SelectButtonComponent {...args} />;
 export const Error = Template.bind({});
 Error.args = {
-	...defaultParams,
+	...defaultProps,
 	label: 'Error',
 	variant: 'error'
 };
 
 export const Success = Template.bind({});
 Success.args = {
-	...defaultParams,
+	...defaultProps,
 	label: 'Success',
 	variant: 'success'
 };

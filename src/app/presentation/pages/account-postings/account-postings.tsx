@@ -30,7 +30,7 @@ function AccountPostingsPage() {
 				</div>
 			</header>
 			<section className='mt-24 px-160px md:px-20px sm:px-20px flex justify-between gap-16px'>
-				<div className='w-full'>
+				<div className='w-full-percent'>
 					<InputTextTag
 						onChange={e => console.log(e)}
 						placeholder='Busque uma transação'
@@ -60,34 +60,16 @@ function AccountPostingsPage() {
 				className='mt-7 px-160px md:px-20px sm:px-20px flex flex-col justify-between gap-8px'
 				data-testid='main'
 			>
-				<TransactionTag
-					amount={1000}
-					category='Venda'
-					date='13/04/2022'
-					description='Descrição da transação'
-					type='outbound'
-				/>
-				<TransactionTag
-					amount={1000}
-					category='Venda'
-					date='13/04/2022'
-					description='Descrição da transação'
-					type='inbound'
-				/>
-				<TransactionTag
-					amount={1000}
-					category='Venda'
-					date='13/04/2022'
-					description='Descrição da transação'
-					type='outbound'
-				/>
-				<TransactionTag
-					amount={1000}
-					category='Venda'
-					date='13/04/2022'
-					description='Descrição da transação'
-					type='inbound'
-				/>
+				{Array.from({ length: 4 }).map((_, index) => (
+					<TransactionTag
+						amount={1000}
+						category='Venda'
+						date='13/04/2022'
+						description='Descrição da transação'
+						type='outbound'
+						key={index}
+					/>
+				))}
 			</main>
 			<section className='mt-10 mb-10 flex justify-center'>
 				<PaginationTag totalPages={10} />
