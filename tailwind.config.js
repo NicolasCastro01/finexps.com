@@ -18,6 +18,9 @@ module.exports = {
 			'1px': '0.0625rem',
 			'2px': '0.125rem',
 			'3px': '0.1875rem',
+			'7px': '0.4375rem',
+			'10px': '0.625rem',
+			'16px': '1rem',
 			'40px': '2.5rem',
 			'50px': '3.125rem',
 			'54px': '3.375rem',
@@ -38,8 +41,9 @@ module.exports = {
 			'152px': '9.5rem',
 			'340px': '21.25rem',
 			'400px': '25rem',
-			full: '100%',
-			'full-vw': '100vw'
+			'full-percent': '100%',
+			'full-vw': '100vw',
+			'half-percent': '50%'
 		},
 		maxWidth: {
 			'211px': '13.1875rem'
