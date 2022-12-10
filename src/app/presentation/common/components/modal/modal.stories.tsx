@@ -2,13 +2,13 @@ import { ComponentMeta } from '@storybook/react';
 import { ButtonTag } from '~/app/presentation/common/components/button';
 import { InputTextTag } from '~/app/presentation/common/components/input-text';
 import type { ModalProps } from './interfaces';
-import ModalTag from './modal';
+import ModalComponent from './modal';
 
-const defaultParams = {
+const defaultProps = {
 	title: 'Modal',
 	isOpen: true,
 	children: (
-		<div className='w-full'>
+		<div className='w-full-percent'>
 			<InputTextTag
 				placeholder='Placeholder'
 				onChange={() => {
@@ -34,11 +34,11 @@ const defaultParams = {
 
 export default {
 	title: 'Common/Modal',
-	component: ModalTag
-} as ComponentMeta<typeof ModalTag>;
+	component: ModalComponent
+} as ComponentMeta<typeof ModalComponent>;
 
-const Template = args => <ModalTag {...args} />;
+const Template = args => <ModalComponent {...args} />;
 export const Default = Template.bind({});
 Default.args = {
-	...defaultParams
+	...defaultProps
 };

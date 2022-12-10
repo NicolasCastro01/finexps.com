@@ -1,9 +1,9 @@
 import { ComponentMeta } from '@storybook/react';
 import { SearchIcon } from '~/app/presentation/common/icons';
-import ButtonTag from './button';
+import ButtonComponent from './button';
 import type { ButtonProps } from './interfaces';
 
-const defaultParams = {
+const defaultProps = {
 	ariaLabel: 'Button',
 	backgroundTransparent: false,
 	onClick: () => {
@@ -15,14 +15,14 @@ const defaultParams = {
 
 export default {
 	title: 'Common/Button',
-	component: ButtonTag
-} as ComponentMeta<typeof ButtonTag>;
+	component: ButtonComponent
+} as ComponentMeta<typeof ButtonComponent>;
 
-const Template = args => <ButtonTag {...args} />;
+const Template = args => <ButtonComponent {...args} />;
 
 export const Large = Template.bind({});
 Large.args = {
-	...defaultParams,
+	...defaultProps,
 	variant: 'large',
 	label: 'Button',
 	icon: null
@@ -30,7 +30,7 @@ Large.args = {
 
 export const Medium = Template.bind({});
 Medium.args = {
-	...defaultParams,
+	...defaultProps,
 	variant: 'medium',
 	label: 'Button',
 	icon: null
@@ -38,7 +38,7 @@ Medium.args = {
 
 export const Small = Template.bind({});
 Small.args = {
-	...defaultParams,
+	...defaultProps,
 	variant: 'small',
 	label: null,
 	icon: <SearchIcon />
