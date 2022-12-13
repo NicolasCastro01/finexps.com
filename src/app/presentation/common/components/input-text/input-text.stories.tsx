@@ -3,6 +3,7 @@ import InputTextComponent from './input-text';
 import type { InputTextProps } from './interfaces';
 
 const defaultProps = {
+	type: 'text',
 	placeholder: 'Placeholder',
 	onChange: () => {
 		return;
