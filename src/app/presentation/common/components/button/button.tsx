@@ -13,7 +13,7 @@ function ButtonComponent({
 		const variants = {
 			small: 'w-54px h-54px text-8px',
 			medium: 'text-16px w-152px h-54px',
-			large: 'py-16px px-32px text-16px'
+			large: 'py-16px px-32px w-full-percent text-16px'
 		}[variant];
 
 		return variants;
@@ -22,10 +22,10 @@ function ButtonComponent({
 	const handleBackground = () => {
 		const backgroundTransparentIsTrue = backgroundTransparent;
 		if (backgroundTransparentIsTrue) {
-			return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white [&>svg]:fill-greenLight';
+			return 'bg-transparent border-1px border-greenLight text-greenLight hover:bg-green hover:border-green hover:text-white [&>svg]:fill-greenLight disabled:hover:bg-transparent';
 		}
 
-		return 'bg-greenDark text-white hover:bg-greenLight text-white [&>svg]:fill-white';
+		return 'bg-greenDark text-white hover:bg-greenLight text-white [&>svg]:fill-white disabled:hover:bg-greenDark';
 	};
 
 	return (
@@ -40,6 +40,7 @@ function ButtonComponent({
 			 justify-center
 			 gap-12px
 			 items-center	
+			 disabled:opacity-50
 			 ${handleBackground()}
 			 ${handleVariant()}`}
 			aria-label={ariaLabel}

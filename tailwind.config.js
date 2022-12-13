@@ -39,6 +39,8 @@ module.exports = {
 			'352px': '22rem',
 			'535px': '33.4375rem',
 			'152px': '9.5rem',
+			'159px': '9.9375rem',
+			'211px': '13.1875rem',
 			'340px': '21.25rem',
 			'400px': '25rem',
 			'full-percent': '100%',

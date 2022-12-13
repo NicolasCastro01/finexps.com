@@ -1,12 +1,45 @@
+import { useState } from 'react';
 import {
 	ButtonTag,
 	InputTextTag,
 	PaginationTag
 } from '~/app/presentation/common/components';
 import { FinexpsIcon, SearchIcon } from '~/app/presentation/common/icons';
-import { BalancesTag, TransactionTag } from './components';
+import {
+	BalancesTag,
+	NewTransactionModalTag,
+	TransactionTag
+} from './components';
 
 function AccountPostingsPage() {
+	const [state, setState] = useState({
+		openModalNewTransaction: false
+	});
+
+	const handleState = (key: string, value: boolean) => {
+		setState(prevState => ({ ...prevState, [key]: value }));
+	};
+
+	const handleOpenModalNewTransaction = () => {
+		handleState('openModalNewTransaction', true);
+	};
+
+	const handleCloseModalNewTransaction = () => {
+		handleState('openModalNewTransaction', false);
+	};
+
+	const handleModalNewTransactionComponent = () => {
+		const openModalIsTrue = state.openModalNewTransaction;
+		if (openModalIsTrue) {
+			return (
+				<NewTransactionModalTag
+					isOpen={openModalIsTrue}
+					onClose={handleCloseModalNewTransaction}
+				/>
+			);
+		}
+	};
+
 	return (
 		<>
 			<header
@@ -19,10 +52,10 @@ function AccountPostingsPage() {
 					</div>
 					<ButtonTag
 						backgroundTransparent={false}
-						onClick={() => console.log('click')}
+						onClick={() => handleOpenModalNewTransaction()}
 						variant='medium'
 						label='Nova transação'
-						ariaLabel='Botão Nova transação'
+						ariaLabel='Botão para abrir modal de nova transação'
 					/>
 				</div>
 				<div className='mt-10'>
@@ -32,7 +65,8 @@ function AccountPostingsPage() {
 			<section className='mt-24 px-160px md:px-20px sm:px-20px flex justify-between gap-16px'>
 				<div className='w-full-percent'>
 					<InputTextTag
-						onChange={e => console.log(e)}
+						type='text'
+						onChange={e => console.log(e.target.value)}
 						placeholder='Busque uma transação'
 					/>
 				</div>
@@ -43,7 +77,7 @@ function AccountPostingsPage() {
 						variant='medium'
 						label='Buscar'
 						icon={<SearchIcon />}
-						ariaLabel='Botão Buscar'
+						ariaLabel='Botão para buscar uma transação'
 					/>
 				</div>
 				<div className='hidden sm:block'>
@@ -51,8 +85,8 @@ function AccountPostingsPage() {
 						backgroundTransparent
 						onClick={() => console.log('click')}
 						variant='small'
+						ariaLabel='Botão pequeno para buscar uma transação'
 						icon={<SearchIcon />}
-						ariaLabel='Botão Buscar Pequeno'
 					/>
 				</div>
 			</section>
@@ -74,6 +108,7 @@ function AccountPostingsPage() {
 			<section className='mt-10 mb-10 flex justify-center'>
 				<PaginationTag totalPages={10} />
 			</section>
+			{handleModalNewTransactionComponent()}
 		</>
 	);
 }

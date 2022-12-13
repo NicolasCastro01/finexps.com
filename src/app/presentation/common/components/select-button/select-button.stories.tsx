@@ -10,7 +10,8 @@ const defaultProps = {
 	},
 	label: 'Label',
 	icon: <ArrowUpCircleIcon />,
-	variant: 'success'
+	variant: 'success',
+	value: 'value'
 } as SelectButtonProps;
 
 export default {

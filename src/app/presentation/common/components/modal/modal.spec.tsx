@@ -3,7 +3,8 @@ import ModalComponent from './modal';
 
 const defaultProps = {
 	isOpen: true,
-	title: 'Modal Title'
+	title: 'Modal Title',
+	onClose: jest.fn()
 };
 
 const makeSut = () =>
@@ -13,22 +14,39 @@ const makeSut = () =>
 		</ModalComponent>
 	);
 
-describe('ModalComponent', () => {
-	test('should render', () => {
-		makeSut();
-		const component = screen.getByTestId('modal');
-		expect(component).toBeInTheDocument();
+describe('Modal component', () => {
+	describe('Render', () => {
+		it('should render modal with isOpen true', () => {
+			makeSut();
+			const modal = screen.getByTestId('modal');
+			expect(modal).toBeInTheDocument();
+		});
+
+		it('should render modal with isOpen false', () => {
+			defaultProps.isOpen = false;
+			makeSut();
+			const modal = screen.queryByTestId('modal');
+			expect(modal).not.toBeInTheDocument();
+		});
 	});
 
-	test('should render button close modal', () => {
-		makeSut();
-		const button = screen.getByRole('button', { name: 'Fechar modal' });
-		expect(button).toBeInTheDocument();
-	});
+	describe('Interaction', () => {
+		beforeEach(() => {
+			defaultProps.isOpen = true;
+		});
 
-	test('should call handleClose', () => {
-		makeSut();
-		const button = screen.getByRole('button', { name: 'Fechar modal' });
-		fireEvent.click(button);
+		it('should render button close modal', () => {
+			makeSut();
+			const button = screen.getByRole('button', { name: 'Fechar modal' });
+			expect(button).toBeInTheDocument();
+		});
+
+		it('should call handleClose', () => {
+			makeSut();
+			const button = screen.getByRole('button', { name: 'Fechar modal' });
+			fireEvent.click(button);
+		});
+
+		it;
 	});
 });
