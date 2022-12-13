@@ -10,6 +10,7 @@ const defaultProps = {
 	children: (
 		<div className='w-full-percent'>
 			<InputTextTag
+				type='text'
 				placeholder='Placeholder'
 				onChange={() => {
 					return;
