@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import { CloseIcon } from '~/app/presentation/common/icons';
 import type { ModalProps } from './interfaces';
 
-function ModalComponent({ children, title, isOpen }: ModalProps) {
-	const [close, setClose] = useState(false);
-
+function ModalComponent({ children, title, isOpen, onClose }: ModalProps) {
 	const handleClose = () => {
-		setClose(true);
+		onClose();
 	};
 
 	const Header = () => (
@@ -22,13 +19,13 @@ function ModalComponent({ children, title, isOpen }: ModalProps) {
 	);
 
 	const handleModal = () => {
-		const modalIsOpen = isOpen && !close;
+		const modalIsOpen = isOpen;
 		if (!modalIsOpen) {
 			return <div />;
 		}
 
 		return (
-			<div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-1 outline-none focus:outline-none h-screen w-screen bg-gray-900 bg-opacity-50 sm:items-end'>
+			<div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-1 outline-none focus:outline-none h-screen w-screen bg-gray1 bg-opacity-80 sm:items-end'>
 				<div
 					className='bg-gray2 rounded-6px w-535px sm:w-full-percent sm:rounded-t-20px'
 					role='dialog'
