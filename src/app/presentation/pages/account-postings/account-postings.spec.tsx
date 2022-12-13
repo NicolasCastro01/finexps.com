@@ -20,7 +20,7 @@ describe('Account Postings Page', () => {
 		it('should click on new transaction button', () => {
 			makeSut();
 			const button = screen.getByRole('button', {
-				name: 'Botão Nova transação'
+				name: 'Botão para buscar uma transação'
 			});
 			fireEvent.click(button);
 			expect(button).toBeInTheDocument();
@@ -29,7 +29,7 @@ describe('Account Postings Page', () => {
 		it('should click on search button', () => {
 			makeSut();
 			const button = screen.getByRole('button', {
-				name: 'Botão Buscar'
+				name: 'Botão para buscar uma transação'
 			});
 			fireEvent.click(button);
 			expect(button).toBeInTheDocument();
@@ -43,13 +43,40 @@ describe('Account Postings Page', () => {
 			fireEvent.change(input, { target: { value: 'teste' } });
 			expect(input).toBeInTheDocument();
 		});
+
+		it('should click on new transaction button and open modal', () => {
+			makeSut();
+			const button = screen.getByRole('button', {
+				name: 'Botão para abrir modal de nova transação'
+			});
+			fireEvent.click(button);
+			const modal = screen.getByRole('dialog', {
+				name: 'Nova transação'
+			});
+			expect(modal).toBeInTheDocument();
+		});
+
+		it('should click on new transaction button and close modal', () => {
+			makeSut();
+			const button = screen.getByRole('button', {
+				name: 'Botão para abrir modal de nova transação'
+			});
+			fireEvent.click(button);
+			const modal = screen.getByRole('dialog', { name: 'Nova transação' });
+			expect(modal).toBeInTheDocument();
+			const closeButton = screen.getByRole('button', {
+				name: 'Fechar modal'
+			});
+			fireEvent.click(closeButton);
+			expect(modal).not.toBeInTheDocument();
+		});
 	});
 
 	describe('Interaction with mobile resolution', () => {
 		it('should click on new transaction button', () => {
 			makeSut();
 			const button = screen.getByRole('button', {
-				name: 'Botão Buscar Pequeno'
+				name: 'Botão pequeno para buscar uma transação'
 			});
 			fireEvent.click(button);
 			expect(button).toBeInTheDocument();
