@@ -1,3 +1,3 @@
 export interface PaginationProps {
-	totalPages: number;
+  totalPages: number;
 }
