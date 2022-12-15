@@ -3,23 +3,23 @@ import InputTextComponent from './input-text';
 import type { InputTextProps } from './interfaces';
 
 const defaultProps = {
-	type: 'text',
-	placeholder: 'Placeholder',
-	onChange: () => {
-		return;
-	},
-	error: false,
-	value: ''
+  type: 'text',
+  placeholder: 'Placeholder',
+  onChange: () => {
+    return;
+  },
+  error: false,
+  value: ''
 } as InputTextProps;
 
 export default {
-	title: 'Common/InputText',
-	component: InputTextComponent
+  title: 'Common/InputText',
+  component: InputTextComponent
 } as ComponentMeta<typeof InputTextComponent>;
 
 const Template = args => <InputTextComponent {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-	...defaultProps
+  ...defaultProps
 };

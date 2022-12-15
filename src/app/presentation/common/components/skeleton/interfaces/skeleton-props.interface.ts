@@ -1,3 +1,3 @@
 export interface SkeletonProps {
-	height: 'small' | 'medium' | 'large';
+  height: 'small' | 'medium' | 'large';
 }

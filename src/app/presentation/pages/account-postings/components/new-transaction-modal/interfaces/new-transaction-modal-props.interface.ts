@@ -1,4 +1,4 @@
 export interface NewTransactionModalProps {
-	isOpen: boolean;
-	onClose: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 }
