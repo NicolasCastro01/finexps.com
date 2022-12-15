@@ -9,7 +9,7 @@
 		"lint": "eslint . --ext .js,.jsx,.ts,.tsx",
 		"lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
 		"prepare": "husky install",
-		"storybook": "start-storybook -p 6006",
+		"storybook": "start-storybook -p 6006 -s ./public",
 		"build-storybook": "build-storybook",
 		"update-deps": "ncu -u && yarn install"
 	},
