@@ -67,7 +67,8 @@ module.exports = {
 			gray5: '#7C7C8A',
 			gray6: '#C4C4CC',
 			gray7: '#E1E1E6',
-			white: '#FFFFFF'
+			white: '#FFFFFF',
+			blue: '#3391FF'
 		},
 		fontFamily: {
 			roboto: ['Roboto', 'sans-serif']
@@ -106,6 +107,7 @@ module.exports = {
 			'16px': '1rem',
 			'20px': '1.25rem',
 			'24px': '1.5rem',
+			'30px': '1.875rem',
 			'32px': '2rem'
 		},
 		extend: {
