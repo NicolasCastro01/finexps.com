@@ -5,7 +5,7 @@ import AccountPostingsPage from '~/app/presentation/pages/account-postings/accou
 
 export default function Page() {
   return (
-    <GlobalLayoutTag title='Dev'>
+    <GlobalLayoutTag title='Lançamentos'>
       <AccountPostingsPage />
     </GlobalLayoutTag>
   );

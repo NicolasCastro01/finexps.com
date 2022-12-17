@@ -1,5 +1,4 @@
 import { Roboto } from '@next/font/google';
-import { FooterTag } from '~/app/presentation/common/components';
 
 const roboto = Roboto({
   weight: ['300', '400', '700'],
@@ -14,9 +13,8 @@ interface GlobalLayoutProps {
 function GlobalLayout({ children, title }: GlobalLayoutProps) {
   return (
     <>
-      <title>{title}</title>
+      <title>{`${title} · Finexps`}</title>
       <main className={roboto.className}>{children}</main>
-      <FooterTag />
     </>
   );
 }
