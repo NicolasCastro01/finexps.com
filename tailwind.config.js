@@ -28,7 +28,14 @@ module.exports = {
       '137px': '8.5625rem',
       '140px': '8.75rem',
       '150px': '9.375rem',
-      '212px': '13.25rem'
+      '212px': '13.25rem',
+      '439px': '27.3125rem',
+      'full-vh': '100vh',
+      'full-percent': '100%',
+      'half-vh': '50vh',
+      '65-vh': '65vh',
+      '75-vh': '75vh',
+      '85-vh': '85vh'
     },
     width: {
       '40px': '2.5rem',
@@ -98,7 +105,9 @@ module.exports = {
       '32px': '2rem',
       '40px': '2.5rem',
       '48px': '3rem',
-      '160px': '10rem'
+      '112px': '7rem',
+      '160px': '10rem',
+      '192px': '12rem'
     },
     gap: {
       '4px': '0.25rem',
