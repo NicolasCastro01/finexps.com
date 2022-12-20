@@ -1,6 +1,6 @@
 'use client';
 
-import '~/app/presentation/common/styles/global.css';
+import '~/presentation/common/styles/global.css';
 
 export default function RootLayout({
   children
