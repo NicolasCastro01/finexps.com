@@ -1,9 +1,9 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import RegisterComponent from './register';
+import RegisterPage from './register';
 
-const makeSut = () => render(<RegisterComponent />);
+const makeSut = () => render(<RegisterPage />);
 
-describe('RegisterComponent', () => {
+describe('Register Page', () => {
   beforeEach(() => {
     makeSut();
   });
