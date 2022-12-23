@@ -41,7 +41,7 @@ function AccountPostingsPage() {
   };
 
   return (
-    <>
+    <main className='bg-gray2 pb-32px'>
       <header
         className='bg-gray1 h-212px py-40px px-160px md:px-20px sm:px-20px'
         data-testid='header'
@@ -109,7 +109,7 @@ function AccountPostingsPage() {
         <PaginationTag totalPages={10} />
       </section>
       {handleModalNewTransactionComponent()}
-    </>
+    </main>
   );
 }
 
