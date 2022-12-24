@@ -1,7 +1,7 @@
 import CircularLoadingComponent from './circular-loading';
 
 export default {
-  title: 'Common/Loading/Circular',
+  title: 'Common/Loadings/Circular',
   component: CircularLoadingComponent
 };
 
