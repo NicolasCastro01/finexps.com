@@ -7,6 +7,7 @@ import {
 import { FinexpsIcon, SearchIcon } from '~/presentation/common/icons';
 import {
   BalancesTag,
+  LoggedInUserTag,
   NewTransactionModalTag,
   TransactionTag
 } from './components';
@@ -43,9 +44,12 @@ function AccountPostingsPage() {
   return (
     <main className='bg-gray2 pb-32px'>
       <header
-        className='bg-gray1 h-212px py-40px px-160px md:px-20px sm:px-20px'
+        className='bg-gray1 h-261px py-40px px-160px md:px-20px sm:px-20px'
         data-testid='header'
       >
+        <div>
+          <LoggedInUserTag />
+        </div>
         <div className='flex justify-between'>
           <div className='[&>svg]:fill-green'>
             <FinexpsIcon />

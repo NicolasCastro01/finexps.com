@@ -31,6 +31,7 @@ module.exports = {
       '140px': '8.75rem',
       '150px': '9.375rem',
       '212px': '13.25rem',
+      '261px': '16.3125rem',
       '439px': '27.3125rem',
       'full-vh': '100vh',
       'full-percent': '100%',
