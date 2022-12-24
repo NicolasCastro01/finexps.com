@@ -22,6 +22,7 @@ module.exports = {
       '7px': '0.4375rem',
       '10px': '0.625rem',
       '16px': '1rem',
+      '21px': '1.3125rem',
       '40px': '2.5rem',
       '50px': '3.125rem',
       '54px': '3.375rem',
@@ -39,6 +40,7 @@ module.exports = {
       '85-vh': '85vh'
     },
     width: {
+      '21px': '1.3125rem',
       '40px': '2.5rem',
       '50px': '3.125rem',
       '54px': '3.375rem',
