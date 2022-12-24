@@ -1,6 +1,7 @@
 export * from './box';
 export * from './button';
 export * from './card-value';
+export * from './circular-loading';
 export * from './footer';
 export * from './input-text';
 export * from './modal';

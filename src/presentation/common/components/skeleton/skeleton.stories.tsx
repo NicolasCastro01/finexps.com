@@ -6,7 +6,7 @@ const defaultProps = {
 } as SkeletonProps;
 
 export default {
-  title: 'Common/Skeleton',
+  title: 'Common/Loadings/Skeleton',
   component: SkeletonComponent
 } as ComponentMeta<typeof SkeletonComponent>;
 

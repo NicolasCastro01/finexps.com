@@ -7,7 +7,8 @@ const defaultProps = {
   onClick: () => jest.fn(),
   variant: 'medium',
   label: 'Buscar',
-  ariaLabel: 'Botão Buscar'
+  ariaLabel: 'Botão Buscar',
+  loading: false
 } as ButtonProps;
 
 const makeSut = () => render(<ButtonComponent {...defaultProps} />);
@@ -40,9 +41,15 @@ describe('Button component', () => {
       expect(component).toHaveClass('bg-transparent');
     });
 
-    // not label
     it('should render without label', () => {
       defaultProps.label = '';
+      makeSut();
+      const component = screen.getByRole('button', { name: 'Botão Buscar' });
+      expect(component).toHaveClass('bg-transparent');
+    });
+
+    it('should render with loading', () => {
+      defaultProps.loading = true;
       makeSut();
       const component = screen.getByRole('button', { name: 'Botão Buscar' });
       expect(component).toHaveClass('bg-transparent');
