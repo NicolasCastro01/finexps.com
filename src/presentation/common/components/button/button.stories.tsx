@@ -10,7 +10,8 @@ const defaultProps = {
     return;
   },
   variant: 'large',
-  label: 'Button'
+  label: 'Button',
+  disabled: false
 } as ButtonProps;
 
 export default {

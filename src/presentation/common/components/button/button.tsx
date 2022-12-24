@@ -1,3 +1,4 @@
+import { CircularLoadingTag } from '~/presentation/common/components/circular-loading';
 import type { ButtonProps } from './interfaces';
 
 function ButtonComponent({
@@ -7,7 +8,8 @@ function ButtonComponent({
   disabled,
   icon,
   variant,
-  ariaLabel
+  ariaLabel,
+  loading
 }: ButtonProps) {
   const handleVariant = () => {
     const variants = {
@@ -28,6 +30,21 @@ function ButtonComponent({
     return 'bg-greenDark text-white hover:bg-greenLight text-white [&>svg]:fill-white disabled:hover:bg-greenDark';
   };
 
+  const handleLoading = () => {
+    if (!loading) {
+      return (
+        <>
+          {icon}
+          {label}
+        </>
+      );
+    }
+
+    return <CircularLoadingTag />;
+  };
+
+  const isDisabled = disabled || loading;
+
   return (
     <button
       type='button'
@@ -46,10 +63,9 @@ function ButtonComponent({
       aria-label={ariaLabel}
       onClick={onClick}
       data-testid='button'
-      disabled={disabled}
+      disabled={isDisabled}
     >
-      {icon}
-      {label}
+      {handleLoading()}
     </button>
   );
 }

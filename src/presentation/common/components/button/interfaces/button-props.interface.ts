@@ -6,4 +6,5 @@ export interface ButtonProps {
   backgroundTransparent: boolean;
   variant: 'small' | 'medium' | 'large';
   ariaLabel: string;
+  loading?: boolean;
 }
