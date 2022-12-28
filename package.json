@@ -16,6 +16,7 @@
 	"dependencies": {
 		"@next/font": "^13.0.6",
 		"@prisma/client": "4.8.0",
+		"bcryptjs": "^2.4.3",
 		"husky": "^8.0.2",
 		"next": "latest",
 		"react-dom": "^18.2.0"
