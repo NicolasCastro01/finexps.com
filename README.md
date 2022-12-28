@@ -17,41 +17,46 @@ This project is a simple expenses manager, where you can add, edit and delete ex
 
 ## Status
 
--   [x] Create the project with Next.JS v.13
--   [x] Create structure of the project
--   [x] Create the components with styles
-    -   [x] Common components
--   [ ] Create the pages
-    -   [ ] Page postings
-    -   [ ] Page login
--   [ ] Create the routes
--   [ ] Create the tests
--   [ ] Deploy the project on Vercel
+- [x] Create the project with Next.JS v.13
+- [x] Create structure of the project
+- [x] Create the components with styles
+  - [x] Common components
+    - [x] Create documentation of the components with Storybook
+- [x] Create the pages
+  - [x] Page account postings
+  - [x] Page login
+  - [x] Page register
+- [ ] Create the routes
+  - [x] Route of register
+  - [ ] Route of login
+  - [ ] Route of authentication
+  - [ ] Route of account postings
+- [ ] Deploy the project (beta version) on Vercel
 
 ## Structure
 
 The structure of the project is based on the DDD (Domain Driven Design) pattern, where the domain is divided into layers, each with its own responsibility.
 Layers:
 
--   Application: responsible for the application's business rules.
--   Domain: responsible for creating the domain entities.
--   Infra: responsible for the data access layer.
--   Main: responsible for the application's entry point.
--   Presentation: responsible for the application's presentation layer.
+- Application: responsible for the application's business rules.
+- Domain: responsible for creating the domain entities.
+- Infra: responsible for the data access layer.
+- Main: responsible for the application's entry point.
+- Presentation: responsible for the application's presentation layer.
 
 ## Technologies
 
 This project was developed with the following technologies:
 
--   [React](https://reactjs.org)
--   [Next.js](https://nextjs.org)
--   [TypeScript](https://www.typescriptlang.org)
--   [Tailwind CSS](https://tailwindcss.com)
--   [Jest](https://jestjs.io)
--   [Testing Library](https://testing-library.com)
--   [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
--   [Husky](https://typicode.github.io/husky/#/)
--   [Storybook](https://storybook.js.org)
+- [React](https://reactjs.org)
+- [Next.js](https://nextjs.org)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Jest](https://jestjs.io)
+- [Testing Library](https://testing-library.com)
+- [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
+- [Husky](https://typicode.github.io/husky/#/)
+- [Storybook](https://storybook.js.org)
 
 ## Getting started
 
@@ -60,6 +65,14 @@ Clone the project and access the folder.
 ```bash
 $ cd finexps.com
 ```
+
+Duplicate the `.env.example` file and rename it to `.env` and fill in the variables:
+
+<!-- create table with variables -->
+
+| Variable     | Description  | Example                                             |
+| ------------ | ------------ | --------------------------------------------------- |
+| DATABASE_URL | Database URL | postgres://postgres:postgres@localhost:5432/finexps |
 
 Follow the steps below:
 
