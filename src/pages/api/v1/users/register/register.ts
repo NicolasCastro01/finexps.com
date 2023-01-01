@@ -1,6 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { apiLogger, PasswordUtil } from '~/infra';
+import { HttpStatusCodeEnum } from '~/app/server/protocols/http';
+import { RemoteAddUser } from '~/app/server/usecases/user';
+import { apiLogger } from '~/infra';
 
 export default async function handler(
   req: NextApiRequest,
@@ -8,20 +10,14 @@ export default async function handler(
 ) {
   try {
     const { email, name, password } = req.body;
-    const hashedPassword = await PasswordUtil.hash({
-      password,
-      salt: 10
-    });
-    const prisma = new PrismaClient();
-    await prisma.user.create({
-      data: {
-        email,
-        name,
-        password: hashedPassword
-      }
+    const register = new RemoteAddUser(new PrismaClient());
+    register.run({
+      email,
+      name,
+      password
     });
 
-    res.status(201).end();
+    res.status(HttpStatusCodeEnum.CREATED).end();
   } catch (error) {
     apiLogger({
       params: req.body,
@@ -29,6 +25,6 @@ export default async function handler(
       category: 'REGISTER_USER'
     });
 
-    res.status(400).end();
+    res.status(HttpStatusCodeEnum.BAD_REQUEST).end();
   }
 }
