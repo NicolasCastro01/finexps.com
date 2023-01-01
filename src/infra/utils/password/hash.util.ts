@@ -1,9 +1,5 @@
 import bcrypt from 'bcryptjs';
-
-interface HashPasswordProps {
-  password: string;
-  salt: number;
-}
+import type { HashPasswordProps } from './interfaces';
 
 export const hash = async ({ password, salt }: HashPasswordProps) => {
   const hashedPassword = await bcrypt.hash(password, salt);
