@@ -15,11 +15,18 @@ enum TransactionTypeEnum {
   OUTBOUND
 }
 
+enum UserMetadataCategoryEnum {
+  RESET_PASSWORD
+  ACTIVATE_ACCOUNT
+}
+
 model User {
   id        String   @id @default(uuid())
   email     String   @unique
   name      String
   password  String
+  active    Boolean  @default(false)
+  token_auth String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt @map(name: "updated_at")
   transactions Transaction[]
@@ -48,4 +55,12 @@ model Transaction {
   userId     String
   category   Category @relation(fields: [categoryId], references: [id])
   categoryId String
+}
+
+model UserMetadata {
+  id        String   @id @default(uuid())
+  code      String
+  category  UserMetadataCategoryEnum
+  expiresAt DateTime
+  createdAt DateTime @default(now())
 }
