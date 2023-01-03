@@ -57,6 +57,7 @@ This project was developed with the following technologies:
 - [Yarn](https://yarnpkg.com) or [NPM](https://www.npmjs.com)
 - [Husky](https://typicode.github.io/husky/#/)
 - [Storybook](https://storybook.js.org)
+- [React Email](https://react.email/)
 
 ## Getting started
 
