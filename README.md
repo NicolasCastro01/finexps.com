@@ -74,6 +74,7 @@ Duplicate the `.env.example` file and rename it to `.env` and fill in the variab
 | Variable     | Description  | Example                                             |
 | ------------ | ------------ | --------------------------------------------------- |
 | DATABASE_URL | Database URL | postgres://postgres:postgres@localhost:5432/finexps |
+| JWT_SECRET   | Secret key   | 123456                                              |
 
 Follow the steps below:
 
@@ -115,6 +116,14 @@ Components documentation:
 $ yarn storybook
 # or
 $ npm run storybook
+```
+
+Preview of emails with (React Email)[https://react.email/]:
+
+```bash
+$ yarn start:email
+# or
+$ npm run start:email
 ```
 
 ## Contributors
