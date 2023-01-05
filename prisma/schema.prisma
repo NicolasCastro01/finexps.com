@@ -21,46 +21,48 @@ enum UserMetadataCategoryEnum {
 }
 
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique
-  name      String
-  password  String
-  active    Boolean  @default(false)
-  token_auth String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt @map(name: "updated_at")
+  id           String         @id @default(uuid())
+  email        String         @unique
+  name         String
+  password     String
+  active       Boolean        @default(false)
+  token_auth   String?
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt @map(name: "updated_at")
   transactions Transaction[]
-  categories Category[]
+  categories   Category[]
+  UserMetadata UserMetadata[]
 }
 
 model Category {
-  id        String   @id @default(uuid())
-  name      String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt @map(name: "updated_at")
-  user      User     @relation(fields: [userId], references: [id])
-  userId    String
+  id           String        @id @default(uuid())
+  name         String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt @map(name: "updated_at")
+  user         User          @relation(fields: [userId], references: [id])
+  userId       String
   transactions Transaction[]
 }
 
-
 model Transaction {
-  id        String   @id @default(uuid())
+  id          String              @id @default(uuid())
   description String
-  amount     Float
-  type       TransactionTypeEnum
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt @map(name: "updated_at")
-  user       User     @relation(fields: [userId], references: [id])
-  userId     String
-  category   Category @relation(fields: [categoryId], references: [id])
-  categoryId String
+  amount      Float
+  type        TransactionTypeEnum
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt @map(name: "updated_at")
+  user        User                @relation(fields: [userId], references: [id])
+  userId      String
+  category    Category            @relation(fields: [categoryId], references: [id])
+  categoryId  String
 }
 
 model UserMetadata {
-  id        String   @id @default(uuid())
+  id        String                   @id @default(uuid())
   code      String
   category  UserMetadataCategoryEnum
   expiresAt DateTime
-  createdAt DateTime @default(now())
+  createdAt DateTime                 @default(now())
+  user      User                     @relation(fields: [userId], references: [id])
+  userId    String
 }

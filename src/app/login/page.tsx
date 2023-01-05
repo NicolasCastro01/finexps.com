@@ -1,7 +1,7 @@
 'use client';
 
-import { GlobalLayoutTag } from '~/presentation/common/layouts';
-import { LoginPage } from '~/presentation/pages';
+import { GlobalLayoutTag } from '~/core/presentation/common/layouts';
+import { LoginPage } from '~/core/presentation/pages';
 
 export default function Page() {
   return (

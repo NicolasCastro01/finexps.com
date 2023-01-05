@@ -1,0 +1,4 @@
+export enum UserMetadataCategoryEnum {
+  RESET_PASSWORD = 'RESET_PASSWORD',
+  ACTIVATE_ACCOUNT = 'ACTIVATE_ACCOUNT'
+}
