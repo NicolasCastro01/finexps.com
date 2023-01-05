@@ -1,7 +1,7 @@
 'use client';
 
-import { FooterTag } from '~/presentation/common/components';
-import '~/presentation/common/styles/global.css';
+import { FooterTag } from '~/core/presentation/common/components';
+import '~/core/presentation/common/styles/global.css';
 
 export default function RootLayout({
   children

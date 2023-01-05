@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import StationImage from '~/presentation/common/images/station.png';
+import StationImage from '~/core/presentation/common/images/station.png';
 
 export default function RootLayout({
   children

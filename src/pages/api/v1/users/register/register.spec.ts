@@ -30,6 +30,20 @@ jest.mock('@prisma/client', () => {
   };
 });
 
+jest.mock('~/core/app/server/usecases/user-metadata', () => {
+  return {
+    RemoteAddUserMetadata: jest.fn(() => {
+      return {
+        run: jest.fn(() => {
+          return {
+            code: 201
+          };
+        })
+      };
+    })
+  };
+});
+
 describe('Register', () => {
   it('should create a user', async () => {
     const req = {

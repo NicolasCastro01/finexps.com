@@ -1,8 +1,8 @@
 import { PrismaClient } from '@prisma/client';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { HttpStatusCodeEnum } from '~/app/server/protocols/http';
-import { RemoteAddUser } from '~/app/server/usecases/user';
-import { apiLogger } from '~/infra';
+import { HttpStatusCodeEnum } from '~/core/app/server/protocols/http';
+import { RemoteAddUser } from '~/core/app/server/usecases/user';
+import { apiLogger } from '~/core/infra';
 
 export default async function handler(
   req: NextApiRequest,
